@@ -30,7 +30,7 @@ exercice-2/
 
 ## Démo en ligne
 
-**[Voir le site en ligne](https://html_avancer_1_devoir_exercice-2.clairtyx.com)**
+**[Voir le site en ligne](https://html-avancer-1-devoir-exercice-2.clairtyx.com)**
 
 Le site est hébergé sur GitHub Pages avec un domaine personnalisé.
 
@@ -56,7 +56,7 @@ Servez le contenu du dossier `site/` avec n'importe quel serveur web (Apache, Ng
 
 Le site est configuré pour être déployé sur GitHub Pages :
 - **Dossier source** : `/docs` (copie de `/site`)
-- **Domaine personnalisé** : `html_avancer_1_devoir_exercice-2.clairtyx.com`
+- **Domaine personnalisé** : `html-avancer-1-devoir-exercice-2.clairtyx.com`
 - **Fichier CNAME** : Configuré dans `/docs/CNAME`
 
 Pour activer GitHub Pages, allez dans les paramètres du dépôt :
