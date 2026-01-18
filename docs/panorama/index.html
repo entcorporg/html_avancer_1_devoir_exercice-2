@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<title>Astro with Tailwind CSS</title>
+	<link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="flex flex-col">
+	<main>
+		<header>
+			<div class="flex justify-center items-center p-4">
+				<img src="/img/logo.jpg" width="80" height="80" alt="logo de street life">
+				<h1 class="text-5xl font-normal ml-4 text-blue">
+					Street Life
+				</h1>
+			</div>
+			<nav class="bg-blue">
+				<div class="container mx-auto flex justify-end items-center p-2 text-menu">
+					<div class="space-x-4">
+						<a href="/" class="hover:text-menu-rollover hover:underline">
+							Accueil
+						</a>
+						<a href="/archives" class="hover:text-menu-rollover hover:underline">
+							Archives
+						</a>
+						<a href="/panorama" class="hover:text-menu-rollover hover:underline">
+							Panorama
+						</a>
+						<a href="/contact" class="hover:text-menu-rollover hover:underline">
+							Contact
+						</a>
+						<a href="/about" class="hover:text-menu-rollover hover:underline">
+							À propos
+						</a>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<section class="container mx-auto p-4">
+			<div class="flex flex-row justify-between gap-4">
+				<div class="flex-1 p-4">
+					<span class="text-date font-light text-xs">
+						2014-07-01
+					</span>
+					<h2 class="text-2xl font-bold mb-3 text-blue">
+						Jungle street lives
+					</h2>
+					<img src="/img/image.jpg" alt="Jungle street lives" class="mb-2">
+					<p class="text-blue font-light text-xs">
+						Toward the jungle street life in Antwerp, Vermont, winter
+						2020.
+					</p>
+					<p class="text-text text-sm mt-2">
+						Pellentesque vitae volutpat nulla, pellentesque sagittis dui. Orci
+						varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc
+						scelerisque sed sem ut sollicitudin. Donec pellentesque suscipit posuere. Pellentesque sit amet
+						justo in mauris egestas tempus. Nam tincidunt ante a turpis laoreet, id aliquam lectus
+						consequat. Maecenas fringilla sem sed enim tincidunt, sit amet tristique turpis molestie. Duis
+						rutrum pharetra nunc. Nam mattis maximus sem, et convallis magna interdum sed. Fusce at aliquet
+						arcu. Praesent non dolor commodo, vulputate elit sed, scelerisque turpis. Class aptent taciti
+						sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec vel orci nec
+						ligula vestibulum pretium. Pellentesque convallis mauris lectus. Pellentesque at mollis dui.
+						Vestibulum pretium elementum dolor, eget efficitur ante. Morbi bibendum risus quis varius
+						sollicitudin. Integer blandit luctus consectetur. Aliquam id diam egestas, posuere turpis sed,
+						euismod sem. Fusce non eleifend ligula, non rutrum lacus. Sed interdum ante rhoncus,
+						pellentesque turpis sed, porttitor metus. Aliquam dictum pretium sapien, in convallis elit
+						sollicitudin ac.
+					</p>
+				</div>
+				<div class="flex-1 p-4">
+					<span class="text-date font-light text-xs">
+						2014-06-10
+					</span>
+					<h2 class="text-2xl font-bold mb-3 text-blue">
+						Joe Cowards
+					</h2>
+					<img src="/img/picture.jpg" alt="Joe Cowards" class="mb-2">
+					<p class="text-blue font-light text-xs">
+						Joe Coward&#39;s incredible face at jungle life party,
+						Sylver, 2019.
+					</p>
+					<p class="text-text text-sm mt-2">
+						Donec eleifend, lacus ac varius blandit, nunc est finibus mi, at
+						interdum orci eros vitae purus. Mauris non imperdiet leo. Duis id placerat arcu, ac scelerisque
+						ante. Quisque sit amet dapibus arcu. Praesent feugiat tortor ut ligula elementum aliquet.
+						Curabitur hendrerit, urna a ullamcorper sagittis, libero erat aliquet nunc, ut venenatis tellus
+						lectus id neque. Proin interdum sit amet dolor eget maximus. Sed gravida tempor tortor.
+						Pellentesque porta finibus nibh, non porttitor nibh feugiat nec. Donec in fringilla nisl.
+						Aliquam ut diam leo. Vestibulum tortor eros, tristique eu tincidunt eu, tempor egestas magna.
+						Morbi orci elit, pharetra id tristique eget, lobortis id orci. Curabitur congue, elit vitae
+						convallis placerat, risus urna scelerisque elit, eu rutrum enim dolor eget sem. Pellentesque
+						iaculis ut dolor in feugiat. Proin maximus turpis nibh, vitae condimentum urna finibus ut.
+						Vivamus faucibus erat magna, nec ullamcorper velit mollis eget. Fusce eu eros in lacus
+						sollicitudin iaculis eu et lectus. Proin at tempus lorem. Ut nec magna eu tortor tincidunt
+						vestibulum a vitae purus. Nulla eget dignissim lorem. Vestibulum sed accumsan metus, eget mattis
+						leo.
+					</p>
+				</div>
+				<div class="flex-1 p-4">
+					<span class="text-date font-light text-xs">
+						1815-04-11
+					</span>
+					<h2 class="text-2xl font-bold mb-3 text-blue">
+						Marquee Moon
+					</h2>
+					<img src="/img/cinema.jpg" alt="Marquee Moon" class="mb-2">
+					<p class="text-blue font-light text-xs">
+						Movie theater&#39;s marquee, Moon, 1815.
+					</p>
+					<p class="text-text text-sm mt-2">
+						Morbi ultricies imperdiet sem, vitae sollicitudin purus laoreet
+						sed. Aenean justo risus, commodo at nulla scelerisque, ornare placerat sem. Aenean at libero
+						elit. Nulla sed tempus dui, eget eleifend nibh. Ut et vestibulum risus. Etiam feugiat suscipit
+						ex et bibendum. In eu ultrices risus. Morbi ac leo velit. Duis laoreet ultrices lectus, iaculis
+						ultricies magna dignissim id. Morbi porttitor sit amet ipsum a pulvinar. Donec blandit purus
+						eget sapien elementum condimentum. Ut a purus massa. Sed blandit luctus tellus, eget ultrices
+						tellus gravida quis. Vivamus sit amet euismod lectus. Duis ac ante vel mauris pulvinar suscipit
+						sollicitudin ac leo. Quisque iaculis vulputate auctor. Class aptent taciti sociosqu ad litora
+						torquent per conubia nostra, per inceptos himenaeos. In efficitur condimentum elit. Proin
+						iaculis sem vitae neque semper, tempus condimentum nulla cursus.. Nullam non erat in sapien
+						aliquet porta vel ac mauris.Aenean dignissim quam pulvinar massa tristique, nec tempus libero
+						finibus. Vestibulum eleifend euismod vulputate. Aliquam erat volutpat. Nulla facilisi. Mauris
+						sed porta enim. Nulla facilisi.
+					</p>
+				</div>
+			</div>
+		</section>
+		<footer class="relative bottom-0 mx-auto w-full text-center pt-4 text-sm">
+			<p class="text-blue font-bold text-lg mb-1.5">
+				Street Life - The jungle groove
+			</p>
+			<p class="text-text text-sm font-bold">
+				Handcrafted pixels & text
+			</p>
+			<p class="text-date text-xs">
+				Copyright &copy; 2012 - 2026 Street Life LTD Hambourg Germany
+			</p>
+			<div class="mt-4 pb-2">
+				<a href="/" class="hover:opacity-75">
+					<img src="/img/pinterest.png" alt="Pinterest" class="inline w-8 h-8 mr-1">
+				</a>
+				<a href="/" class="hover:opacity-75">
+					<img src="/img/google.png" alt="Google" class="inline w-8 h-8 mr-1">
+				</a>
+				<a href="/" class="hover:opacity-75">
+					<img src="/img/facebook.png" alt="Facebook" class="inline w-8 h-8 mr-1">
+				</a>
+				<a href="/" class="hover:opacity-75">
+					<img src="/img/twitter.png" alt="Twitter" class="inline w-8 h-8 mr-1">
+				</a>
+				<a href="/" class="hover:opacity-75">
+					<img src="/img/linkedin.png" alt="LinkedIn" class="inline w-8 h-8">
+				</a>
+			</div>
+		</footer>
+	</main>
+</body>
+
+</html>

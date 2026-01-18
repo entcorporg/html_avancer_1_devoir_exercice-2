@@ -28,6 +28,12 @@ exercice-2/
 - Docker & Docker Compose
 - Apache HTTP Server
 
+## Démo en ligne
+
+🌐 **[Voir le site en ligne](https://html_avancer_1_devoir_exercice-2.clairtyx.com)**
+
+Le site est hébergé sur GitHub Pages avec un domaine personnalisé.
+
 ## Installation et démarrage
 
 ### Avec Docker (recommandé)
@@ -45,6 +51,19 @@ Le site sera accessible sur le port configuré dans `docker-compose.yaml`.
 ### Sans Docker
 
 Servez le contenu du dossier `site/` avec n'importe quel serveur web (Apache, Nginx, etc.).
+
+## Configuration GitHub Pages
+
+Le site est configuré pour être déployé sur GitHub Pages :
+- **Dossier source** : `/docs` (copie de `/site`)
+- **Domaine personnalisé** : `html_avancer_1_devoir_exercice-2.clairtyx.com`
+- **Fichier CNAME** : Configuré dans `/docs/CNAME`
+
+Pour activer GitHub Pages, allez dans les paramètres du dépôt :
+1. Settings → Pages
+2. Source : Deploy from a branch
+3. Branch : `main` / `docs`
+4. Configurez votre DNS pour pointer vers GitHub Pages
 
 ## Fonctionnalités
 
