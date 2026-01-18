@@ -61,6 +61,10 @@ body {
     font-family: var(--font-sans);
 }
 
+main {
+    width: 85%;
+}
+
 h1,
 h2,
 h3,
@@ -466,4 +470,10 @@ menu {
 
 .focus\:ring-blue-500:focus {
     box-shadow: 0 0 0 calc(2px) var(--color-blue-500);
+}
+
+@media (max-width: 800px) {
+    main {
+        width: 100%;
+    }
 }

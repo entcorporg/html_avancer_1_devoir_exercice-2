@@ -4,51 +4,54 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="Panorama Street Life">
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 	<title>Astro with Tailwind CSS</title>
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body class="flex flex-col">
-	<main>
-		<header>
-			<div class="flex justify-center items-center p-4">
-				<img src="/img/logo.jpg" width="80" height="80" alt="logo de street life">
-				<h1 class="text-5xl font-normal ml-4 text-blue">
-					Street Life
-				</h1>
-			</div>
-			<nav class="bg-blue">
-				<div class="container mx-auto flex justify-end items-center p-2 text-menu">
-					<div class="space-x-4">
-						<a href="/" class="hover:text-menu-rollover hover:underline">
-							Accueil
-						</a>
-						<a href="/archives" class="hover:text-menu-rollover hover:underline">
-							Archives
-						</a>
-						<a href="/panorama" class="hover:text-menu-rollover hover:underline">
-							Panorama
-						</a>
-						<a href="/contact" class="hover:text-menu-rollover hover:underline">
-							Contact
-						</a>
-						<a href="/about" class="hover:text-menu-rollover hover:underline">
-							À propos
-						</a>
-					</div>
+	<header>
+		<div class="flex justify-center items-center p-4">
+			<img src="/img/logo.jpg" width="80" height="80" alt="logo de street life">
+			<h1 class="text-5xl font-normal ml-4 text-blue">
+				Street Life
+			</h1>
+		</div>
+		<nav class="bg-blue">
+			<div class="container mx-auto flex justify-end items-center p-2 text-menu">
+				<div class="space-x-4">
+					<a href="/" class="hover:text-menu-rollover hover:underline">
+						Accueil
+					</a>
+					<a href="/archives" class="hover:text-menu-rollover hover:underline">
+						Archives
+					</a>
+					<a href="/panorama" class="hover:text-menu-rollover hover:underline">
+						Panorama
+					</a>
+					<a href="/contact" class="hover:text-menu-rollover hover:underline">
+						Contact
+					</a>
+					<a href="/about" class="hover:text-menu-rollover hover:underline">
+						À propos
+					</a>
 				</div>
-			</nav>
-		</header>
+			</div>
+		</nav>
+	</header>
+	<main>
 		<section class="container mx-auto p-4">
 			<div class="flex flex-row justify-between gap-4">
 				<div class="flex-1 p-4">
 					<span class="text-date font-light text-xs">
 						2014-07-01
 					</span>
-					<h2 class="text-2xl font-bold mb-3 text-blue">
-						Jungle street lives
-					</h2>
+					<a href="#">
+						<h2 class="text-2xl font-bold mb-3 text-blue">
+							Jungle street lives
+						</h2>
+					</a>
 					<img src="/img/image.jpg" alt="Jungle street lives" class="mb-2">
 					<p class="text-blue font-light text-xs">
 						Toward the jungle street life in Antwerp, Vermont, winter
@@ -75,9 +78,11 @@
 					<span class="text-date font-light text-xs">
 						2014-06-10
 					</span>
-					<h2 class="text-2xl font-bold mb-3 text-blue">
-						Joe Cowards
-					</h2>
+					<a href="#">
+						<h2 class="text-2xl font-bold mb-3 text-blue">
+							Joe Cowards
+						</h2>
+					</a>
 					<img src="/img/picture.jpg" alt="Joe Cowards" class="mb-2">
 					<p class="text-blue font-light text-xs">
 						Joe Coward&#39;s incredible face at jungle life party,
@@ -104,9 +109,11 @@
 					<span class="text-date font-light text-xs">
 						1815-04-11
 					</span>
-					<h2 class="text-2xl font-bold mb-3 text-blue">
-						Marquee Moon
-					</h2>
+					<a href="#">
+						<h2 class="text-2xl font-bold mb-3 text-blue">
+							Marquee Moon
+						</h2>
+					</a>
 					<img src="/img/cinema.jpg" alt="Marquee Moon" class="mb-2">
 					<p class="text-blue font-light text-xs">
 						Movie theater&#39;s marquee, Moon, 1815.
@@ -129,35 +136,35 @@
 				</div>
 			</div>
 		</section>
-		<footer class="relative bottom-0 mx-auto w-full text-center pt-4 text-sm">
-			<p class="text-blue font-bold text-lg mb-1.5">
-				Street Life - The jungle groove
-			</p>
-			<p class="text-text text-sm font-bold">
-				Handcrafted pixels & text
-			</p>
-			<p class="text-date text-xs">
-				Copyright &copy; 2012 - 2026 Street Life LTD Hambourg Germany
-			</p>
-			<div class="mt-4 pb-2">
-				<a href="/" class="hover:opacity-75">
-					<img src="/img/pinterest.png" alt="Pinterest" class="inline w-8 h-8 mr-1">
-				</a>
-				<a href="/" class="hover:opacity-75">
-					<img src="/img/google.png" alt="Google" class="inline w-8 h-8 mr-1">
-				</a>
-				<a href="/" class="hover:opacity-75">
-					<img src="/img/facebook.png" alt="Facebook" class="inline w-8 h-8 mr-1">
-				</a>
-				<a href="/" class="hover:opacity-75">
-					<img src="/img/twitter.png" alt="Twitter" class="inline w-8 h-8 mr-1">
-				</a>
-				<a href="/" class="hover:opacity-75">
-					<img src="/img/linkedin.png" alt="LinkedIn" class="inline w-8 h-8">
-				</a>
-			</div>
-		</footer>
 	</main>
+	<footer class="relative bottom-0 mx-auto w-full text-center pt-4 text-sm">
+		<p class="text-blue font-bold text-lg mb-1.5">
+			Street Life - The jungle groove
+		</p>
+		<p class="text-text text-sm font-bold">
+			Handcrafted pixels & text
+		</p>
+		<p class="text-date text-xs">
+			Copyright &copy; 2012 - 2026 Street Life LTD Hambourg Germany
+		</p>
+		<div class="mt-4 pb-2">
+			<a href="/" class="hover:opacity-75">
+				<img src="/img/pinterest.png" alt="Pinterest" class="inline w-8 h-8 mr-1">
+			</a>
+			<a href="/" class="hover:opacity-75">
+				<img src="/img/google.png" alt="Google" class="inline w-8 h-8 mr-1">
+			</a>
+			<a href="/" class="hover:opacity-75">
+				<img src="/img/facebook.png" alt="Facebook" class="inline w-8 h-8 mr-1">
+			</a>
+			<a href="/" class="hover:opacity-75">
+				<img src="/img/twitter.png" alt="Twitter" class="inline w-8 h-8 mr-1">
+			</a>
+			<a href="/" class="hover:opacity-75">
+				<img src="/img/linkedin.png" alt="LinkedIn" class="inline w-8 h-8">
+			</a>
+		</div>
+	</footer>
 </body>
 
 </html>
