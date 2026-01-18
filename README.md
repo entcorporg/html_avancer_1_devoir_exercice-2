@@ -30,7 +30,7 @@ exercice-2/
 
 ## Démo en ligne
 
-🌐 **[Voir le site en ligne](https://html_avancer_1_devoir_exercice-2.clairtyx.com)**
+**[Voir le site en ligne](https://html_avancer_1_devoir_exercice-2.clairtyx.com)**
 
 Le site est hébergé sur GitHub Pages avec un domaine personnalisé.
 
