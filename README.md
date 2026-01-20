@@ -1,90 +1,195 @@
-# Street Life - Exercice 2
+# Street Life - Exercice 2 Portfolio
 
-## Description
+Projet HTML/CSS avancé présentant un blog et magazine de photographie street life avec une mise en page moderne utilisant Flexbox et Grid CSS.
 
-Site web "Street Life" présentant du contenu sur la culture urbaine et la vie de rue. Ce projet met en œuvre une architecture moderne avec HTML, CSS et un design responsive.
+## 🌐 Liens de démonstration
 
-## Structure du projet
+- **Portfolio** : https://portfolio.clairtyx.com
+- **Démo en ligne** : https://html-avancer-1-devoir-exercice-2.clairtyx.com
+
+## 📁 Structure du projet
 
 ```
 exercice-2/
-├── apache.conf          # Configuration Apache
-├── docker-compose.yaml  # Configuration Docker
-└── site/
-    ├── index.html       # Page d'accueil
-    ├── about/           # Page À propos
-    ├── archives/        # Page Archives
-    ├── contact/         # Page Contact
-    ├── panorama/        # Page Panorama
-    ├── css/             # Feuilles de style
-    └── img/             # Images et ressources
+├── docs/                      # Site web principal
+│   ├── index.html            # Page d'accueil avec articles en 3 colonnes
+│   ├── about/                # Page "À propos"
+│   ├── archives/             # Page des archives
+│   ├── panorama/             # Galerie panorama
+│   ├── contact/              # Formulaire de contact
+│   ├── css/
+│   │   └── style.css        # Styles Tailwind-inspired avec classes utilitaires
+│   ├── img/                  # Images et icônes du site
+│   ├── manifest.json         # Manifest PWA
+│   └── browserconfig.xml     # Configuration Microsoft Tiles
+├── docker-compose.yaml       # Configuration Docker Apache
+├── apache.conf               # Configuration serveur Apache
+└── README.md                 # Ce fichier
 ```
 
-## Technologies utilisées
+## 🎨 Caractéristiques techniques
 
-- HTML5
-- CSS3 (avec classes utilitaires modernes)
-- Design responsive
-- Docker & Docker Compose
-- Apache HTTP Server
+### Architecture CSS moderne
 
-## Démo en ligne
+Le projet utilise un système de classes utilitaires inspiré de Tailwind CSS :
 
-**[Voir le site en ligne](https://html-avancer-1-devoir-exercice-2.clairtyx.com)**
+```css
+/* Layout Flexbox */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
 
-Le site est hébergé sur GitHub Pages avec un domaine personnalisé.
+/* Spacing */
+.gap-4 { gap: 1rem; }
+.space-x-4 > * + * { margin-left: 1rem; }
+.p-4 { padding: 1rem; }
 
-## Installation et démarrage
+/* Layout Grid */
+.container { max-width: 1280px; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+```
 
-### Avec Docker (recommandé)
+### Pages et fonctionnalités
+
+#### Page d'accueil (`/docs/index.html`)
+- **Layout 3 colonnes** responsive avec Flexbox
+- **Articles** avec images, titres, dates et descriptions
+- **Navigation** horizontale avec 5 sections
+- **Footer** avec liens sociaux et copyright
+- **219 lignes** de HTML sémantique
+
+#### Page Archives (`/docs/archives/`)
+- Liste chronologique des articles
+- Grille responsive d'images
+- Même navigation que l'accueil
+
+#### Page Panorama (`/docs/panorama/`)
+- Galerie d'images en mode panorama
+- Mise en page Grid pour affichage optimal
+
+#### Page Contact (`/docs/contact/`)
+- Formulaire de contact structuré
+- Validation HTML5
+
+#### Page À propos (`/docs/about/`)
+- Présentation du projet Street Life
+- Informations sur l'équipe
+
+### SEO et Progressive Web App
+
+Chaque page inclut :
+- **Meta tags** optimisés (description, viewport, charset)
+- **Icônes multi-plateformes** : Apple Touch Icons (9 tailles), Android, Favicons
+- **Manifest PWA** (`manifest.json`) pour installation sur mobile
+- **Browserconfig.xml** pour tuiles Windows/Microsoft Edge
+- **Titres descriptifs** correspondant au contenu de chaque page
+
+Exemple :
+```html
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/img/android-icon-192x192.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-config" content="/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+```
+
+## 🚀 Déploiement
+
+### Version locale avec Docker
 
 ```bash
-# Démarrer le conteneur
+# Démarrer le serveur Apache
 docker compose up -d
 
-# Arrêter le conteneur
+# Accéder au site
+open http://localhost:3001
+
+# Arrêter le serveur
 docker compose down
 ```
 
-Le site sera accessible sur le port configuré dans `docker-compose.yaml`.
+Le fichier `docker-compose.yaml` configure :
+- **Image** : `httpd:alpine` (serveur Apache léger)
+- **Port** : 3001:80 (évite les conflits avec d'autres services)
+- **Volumes** : Monte `/docs` en lecture seule dans Apache
+- **Configuration** : Utilise `apache.conf` personnalisé
+- **Network** : Bridge pour isolation
 
-### Sans Docker
+### Version production avec GitHub Pages
 
-Servez le contenu du dossier `site/` avec n'importe quel serveur web (Apache, Nginx, etc.).
+Le dossier `/docs` est déployé automatiquement :
+1. Push sur la branche `main`
+2. GitHub Pages sert le contenu du dossier `/docs`
+3. Accessible via le domaine personnalisé configuré dans `CNAME`
 
-## Configuration GitHub Pages
+## 🎯 Approche de développement
 
-Le site est configuré pour être déployé sur GitHub Pages :
-- **Dossier source** : `/docs` (copie de `/site`)
-- **Domaine personnalisé** : `html-avancer-1-devoir-exercice-2.clairtyx.com`
-- **Fichier CNAME** : Configuré dans `/docs/CNAME`
+### Philosophie Flexbox et Grid
 
-Pour activer GitHub Pages, allez dans les paramètres du dépôt :
-1. Settings → Pages
-2. Source : Deploy from a branch
-3. Branch : `main` / `docs`
-4. Configurez votre DNS pour pointer vers GitHub Pages
+Ce projet suit les **bonnes pratiques modernes** du CSS, utilisant massivement Flexbox et Grid pour :
 
-## Fonctionnalités
+- **Layout fluide** : Adaptation automatique aux différentes tailles d'écran
+- **Code maintenable** : Classes utilitaires réutilisables et composables
+- **Performance** : Rendu optimisé par les navigateurs modernes
+- **Productivité** : Prototypage rapide directement dans le HTML
 
-- Navigation multi-pages
-- Design responsive et moderne
-- Architecture CSS modulaire
-- Interface utilisateur intuitive
-- Pages thématiques (Accueil, Archives, Panorama, À propos, Contact)
+### Pourquoi ces technologies ?
 
-## Pages disponibles
+**Flexbox** et **Grid** sont les standards de l'industrie pour plusieurs raisons :
 
-- **Accueil** (`/`) - Page d'accueil du site
-- **Archives** (`/archives`) - Archives du contenu
-- **Panorama** (`/panorama`) - Vue panoramique
-- **À propos** (`/about`) - Informations sur le projet
-- **Contact** (`/contact`) - Page de contact
+1. **Alignement puissant** : Centrage vertical/horizontal trivial
+2. **Responsive naturel** : Adaptation automatique sans media queries complexes
+3. **Lisibilité** : Code plus expressif et maintenable
+4. **Adoption massive** : Utilisés par Tailwind CSS, Bootstrap 5, Material UI
 
-## Auteur
+### Tailwind CSS comme référence
 
-**entcorporg**
+Le système de classes utilitaires est inspiré de **Tailwind CSS**, la référence incontournable en CSS moderne. Tailwind privilégie massivement Flexbox et Grid dans sa documentation et ses exemples, délaissant les anciennes techniques comme `display: table`.
 
-## Licence
+## 🛠 Technologies utilisées
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+- **HTML5** : Structure sémantique moderne
+- **CSS3** : Flexbox, Grid, variables CSS, classes utilitaires
+- **Manifest PWA** : Support Progressive Web App
+- **Docker** : Conteneurisation Apache httpd
+- **GitHub Pages** : Hébergement statique
+- **Apache httpd** : Serveur web pour déploiement local
+
+## 📦 Assets et ressources
+
+### Images
+- `logo.jpg` : Logo Street Life dans le header
+- `image.jpg`, `picture.jpg`, `cinema.jpg` : Photos d'articles
+- Icônes sociales : `pinterest.png`, `google.png`, `facebook.png`, `twitter.png`, `linkedin.png`
+- **Icons multi-plateformes** : 13 tailles différentes pour compatibilité maximale
+
+### Fichiers de configuration
+- `manifest.json` : Configuration PWA (nom, icônes, couleurs)
+- `browserconfig.xml` : Configuration des tuiles Microsoft
+- `CNAME` : Domaine personnalisé pour GitHub Pages
+
+## 🎨 Design et UX
+
+- **Palette de couleurs** : Bleu principal, textes gris, accents colorés
+- **Typographie** : Système de classes pour tailles et poids
+- **Espacements** : Système cohérent avec classes utilitaires
+- **Hover effects** : Soulignement et changements de couleur sur les liens
+- **Responsive** : Layout adaptatif via Flexbox
+
+## 📊 Statistiques du projet
+
+- **5 pages HTML** complètes et interconnectées
+- **~200 lignes** par page HTML en moyenne
+- **Système CSS** avec classes utilitaires Tailwind-inspired
+- **13 icônes** pour support multi-plateformes
+- **PWA-ready** avec manifest et meta tags
+
+---
+
+**Auteur** : Diogo/clairtyx  
+**Projet** : HTML Avancé 1 - Exercice 2  
+**Date** : Janvier 2026  
+**Licence** : Voir fichier LICENSE
